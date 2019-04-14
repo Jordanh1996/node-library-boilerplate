@@ -9,7 +9,8 @@
     "build:dev": "npm run ts:types && NODE_ENV=dev npm run babel",
     "dev": "npm run babel -- --watch & npm run ts:types -- --preserveWatchOutput --watch & nodemon dist/index.js",
     "ts:types": "tsc --emitDeclarationOnly",
-    "babel": "babel src --out-dir dist --extensions \".ts,.tsx,.js,.jsx\""
+    "babel": "babel src --out-dir dist --extensions \".ts,.tsx,.js,.jsx\"",
+    "publish": "node npmPublish"
   },
   "author": "Jordan Hury",
   "license": "ISC",
