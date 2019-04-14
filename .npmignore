@@ -1,0 +1,9 @@
+.gitignore
+src/
+.vscode
+.idea
+dist
+webpack.config.js
+babel.config.js
+npmPublish.js
+tsconfig.json

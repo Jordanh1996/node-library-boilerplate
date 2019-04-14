@@ -1,0 +1,32 @@
+{
+  "name": "node-library-boilerplate",
+  "version": "1.0.0",
+  "description": "",
+  "main": "build/index.js",
+  "scripts": {
+    "start": "NODE_ENV=prd webpack",
+    "build": "NODE_ENV=prd npm run ts:types && NODE_ENV=prd npm run babel -- --out-dir build",
+    "build:dev": "npm run ts:types && NODE_ENV=dev npm run babel",
+    "dev": "npm run babel -- --watch & npm run ts:types -- --preserveWatchOutput --watch & nodemon dist/index.js",
+    "ts:types": "tsc --emitDeclarationOnly",
+    "babel": "babel src --out-dir dist --extensions \".ts,.tsx,.js,.jsx\""
+  },
+  "author": "Jordan Hury",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.4.3",
+    "@babel/core": "^7.4.3",
+    "@babel/plugin-proposal-class-properties": "^7.4.0",
+    "@babel/plugin-proposal-object-rest-spread": "^7.4.3",
+    "@babel/preset-env": "^7.4.3",
+    "@babel/preset-typescript": "^7.3.3",
+    "babel-loader": "^8.0.5",
+    "inquirer": "^6.3.1",
+    "nodemon": "^1.18.11",
+    "nodemon-webpack-plugin": "^4.0.8",
+    "shelljs": "^0.8.3",
+    "typescript": "^3.4.3",
+    "webpack": "^4.29.6",
+    "webpack-cli": "^3.3.0"
+  }
+}
